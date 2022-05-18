@@ -1,0 +1,764 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&family=Roboto:wght@300&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(180.9deg, #030303 31.24%, #4E1471 99.23%);
+}
+
+* {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 9px;
+}
+
+*::-webkit-scrollbar-track { /*barra atras do scroll*/
+    background: #141414;
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb { /*o proprio scroll*/
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #141414;
+}
+/*-------------Barra de Navegação--------------*/
+
+.nav-link, .name, .linha, .navbar-brand {
+    color: #b5ff00;
+}
+
+.navbar {
+    background: rgb(0, 0, 0, 0,28);
+    backdrop-filter: blur(20px);
+    font-size: 10px;
+}
+
+
+.breadcrumb-item.active, .breadcrumb ol {
+    color: #b5ff00;
+}
+
+.fa-bars {
+    color: #b5ff00;
+    font-size: 20px;
+}
+
+.navbar-toggler:focus {
+    border: 0;
+    outline: 0;
+}
+/*---------------Página Inicial-----------------*/
+
+.home {
+    display: flex;
+    align-items: center; /* alinhamento vertical*/
+    justify-content: start; /*Começa da esquerda pra direita*/
+}
+
+.tabfoguete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.foguetao {
+    margin-left: -16rem;
+    margin-top: 8rem;
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0px 4px 4px #13D6E2);
+}
+
+.name, .linha {
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 4rem;
+}
+
+.name {
+    margin-top: 7rem;
+    font-size: 4rem;
+}
+
+.linha {
+    position: relative;
+    overflow: hidden;
+    font-size: .8rem;
+    white-space: nowrap;
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+}
+
+.tabSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    margin-top: 6rem;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 15px #A64DFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    height: 2rem;
+    width: 65vw;
+    background: rgba(196, 196, 196, 0.16);
+    border: 1px solid #A64DFF;
+    color: #13D6E2;
+    font-size: 14px;
+    padding-left: 0.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+    .search-bar:focus {
+        outline: 0;
+    }
+
+.pesquisa {
+    text-align: center;
+    flex-direction: row;
+}
+
+.btn-src {
+    width: 8rem;
+    height: 2rem;
+    color: #A64DFF;
+    background: rgba(196, 196, 196, 0.16);
+    border: 1px solid #A64DFF;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 15px #A64DFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    font-size: 15px;
+}
+
+.btn-download {
+    margin-left: 5rem;
+    width: 12rem;
+    height: 3rem;
+    color: #B5FF00;
+    background: rgba(196, 196, 196, 0.1);
+    border: 1px solid #B5FF00;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #b5ff00;
+    box-shadow: 0 0 15px #b5ff00;
+    text-shadow: 0 0 15px #b5ff00;
+    backdrop-filter: blur(5px);
+    transition: 0.4s;
+}
+
+    .btn-download:hover {
+        background: #B5FF00;
+        color: #030303;
+    }
+
+
+/*-------------------Animação Digitação-----------------*/
+.efeito-digitacao {
+    position: relative;
+    animation: maquinaDeEscrever 4s steps(50) 1s normal both, cursorDeTexto 500ms steps(40) infinite normal;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes maquinaDeEscrever {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30em;
+    }
+}
+
+@keyframes cursorDeTexto {
+    from {
+        border-right-color: #b5ff00;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/*==============================   News   =============================*/
+.title-News, .title-aboutUs {
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P';
+    color: #13D6E2;
+    text-shadow: 0px 4px 10px #13D6E2;
+}
+
+.news.section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+    .news.section li {
+        margin-right: 2rem; /*espaçamento entre os cards*/
+        margin-bottom: 0.5rem;
+    }
+
+    .news.section::-webkit-scrollbar {
+    }
+
+    .news.section::-webkit-scrollbar-track { /*barra atras do scroll*/
+        background: #00000000;
+        border-radius: 20px;
+        width: 3px;
+    }
+
+    .news.section::-webkit-scrollbar-thumb { /*o proprio scroll*/
+        background-color: #;
+        border-radius: 20px;
+        border: 10px solid #00000000;
+        width: 3px;
+        height: 3px;
+    }
+
+.news {
+    overflow-x: hidden;
+}
+
+.card {
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 10px #A64DFF;
+    backdrop-filter: blur(50px);
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    height: 14rem;
+}
+/*==============================   About Us   =============================*/
+.aboutUs {
+    padding-bottom: 5rem;
+}
+
+#aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-aboutUs {
+    text-align: justify;
+    font-family: 'IBM Plex Mono', monospace;
+    width: 40%;
+    height: 100%;
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+    backdrop-filter: blur(50px);
+    padding-top: 2rem;
+    margin-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+.title-aboutUs {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/*---------------------- Rodapé ---------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-top: 5rem;
+}
+
+/*-------------------Animação Rodapé-----------------
+.waves {
+    height: 10rem;
+    width: 100vw;
+}
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+@media (max-width: 575.98px) {
+    .waves {
+        height: 80px;
+        width: 100vw;
+        min-height: 40px;
+    }
+}
+/*==============================   Login Page   =============================*/
+
+.btn:focus {
+    border-style: none;
+    border: 0;
+}
+
+.btn-login.btn {
+    background: #c4c4c400;
+    color: #B5FF00;
+    border: 1px solid #B5FF00;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    border-radius: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group:focus {
+    border: none;
+    text-decoration: none;
+}
+
+.glass-login.container {
+    margin-top: 4rem;
+    font-family: 'IBM Plex Mono', monospace;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 23vw;
+    height: 100%;
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+    letter-spacing: 1px;
+    backdrop-filter: blur(50px);
+    justify-content: center;
+    margin-bottom: -2rem;
+}
+
+.login-title {
+    color: #bbff00;
+    border: #B5FF00;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.btn-login:hover, .btn:hover {
+    box-shadow: 0 0 5px #B5FF00;
+    box-shadow: 0 0 15px #B5FF00;
+    box-shadow: 0 0 25px #B5FF00;
+}
+
+.linkCadastro {
+    margin-top: 2rem;
+    justify-items: center;
+    text-align: center;
+    color: #13D6E2;
+    text-shadow: 0px 4px 10px #13D6E2;
+    margin-bottom: 2rem;
+}
+
+    .linkCadastro:hover {
+        color: #b5ff00;
+    }
+
+.ocultar {
+    display: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+.formulario-login {
+    margin-top: 2rem;
+}
+
+.ocultar {
+    display: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+a {
+    color: #13D6E2;
+    text-align: center;
+}
+
+    a:hover {
+        text-shadow: 0px 4px 10px #13D6E2;
+        color: #13D6E2;
+    }
+/*==============================   Register Page   =============================*/
+.glass-cadastro.container {
+    font-family: 'IBM Plex Mono', monospace;
+    width: 35vw;
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+    letter-spacing: 2px;
+    backdrop-filter: blur(50px);
+    padding-top: 2rem;
+    height: 100%;
+    margin-top: 3rem;
+    margin-bottom: -8rem
+}
+
+.btn-cadastro.btn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #c4c4c400;
+    color: #B5FF00;
+    border: 1px solid #B5FF00;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+    .btn-cadastro.btn:hover {
+        box-shadow: 0 0 5px #B5FF00;
+        box-shadow: 0 0 15px #B5FF00;
+        box-shadow: 0 0 25px #B5FF00;
+    }
+
+input-neon {
+    font-size: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.cadastro-title {
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.receive {
+    color: #13D6E2;
+    text-shadow: 0px 4px 10px #13D6E2;
+    text-align: center;
+}
+
+/*================= Botão Flutuante =================*/
+.menu { /*o bagulho todo*/
+    filter: url("#shadowed-goo");
+    z-index: 100;
+    position: fixed;
+    right: 1px;
+    bottom: 40px;
+    width: 5rem;
+    height: 4rem;
+    font-size: 10px;
+    border: 2px #B5FF00;
+}
+
+.menu-open {
+    background-color: #B5FF00;
+    display: none;
+    border-color: #B5FF00;
+}
+
+.menu-item, .menu-open-button {
+    background-color: #B5FF00;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    line-height: 35px; /*alinhamento dos icones dentro dos botões*/
+    transform: translate3d(0, 0, 0);
+    transition: transform ease-out 200ms;
+    margin-bottom: 3rem;
+}
+
+
+.hamburger { /*O simbolo inicial "3 risquinhos"*/
+    width: 20px;
+    height: 3px;
+    background: #000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    margin-left: -8.7px;
+    margin-top: -1.5px;
+    transition: transform 200ms;
+}
+
+.hamburger-1 {
+    transform: translate3d(0, -8px, 0); /*primeiro risquinho*/
+}
+
+.hamburger-2 {
+    transform: translate3d(0, 0, 0); /*segundo risquinho*/
+}
+
+.hamburger-3 {
+    transform: translate3d(0, 8px, 0); /*terceiro risquinho*/
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+    transform: translate3d(0, 0, 0) rotate(45deg); /*giro dos 3 risquinhos pro x (gira p/ direita*/
+}
+
+.menu-open:checked + .menu-open-button .hamburger-2 {
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-3 {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu-item:nth-child(3) {
+    transition-duration: 180ms;
+    border: 2px solid #B5FF00;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(3):hover {
+        color: #B5FF00;
+        border: 2px solid #B5FF00;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #b5ff00;
+        box-shadow: 0 0 15px #b5ff00;
+        text-shadow: 0 0 15px #b5ff00;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-item:nth-child(4) {
+    transition-duration: 180ms;
+    border: 2px solid #A64DFF;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(4):hover {
+        color: #A64DFF;
+        border: 2px solid #A64DFF;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #A64DFF;
+        box-shadow: 0 0 15px #A64DFF;
+        text-shadow: 0 0 15px #A64DFF;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-item:nth-child(5) {
+    transition-duration: 180ms;
+    border: 2px solid #2dbdff;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(5):hover {
+        color: #2dbdff;
+        border: 2px solid #2dbdff;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #2dbdff;
+        box-shadow: 0 0 15px #2dbdff;
+        text-shadow: 0 0 15px #2dbdff;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-item:nth-child(6) {
+    transition-duration: 180ms;
+    border: 2px solid #fff;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(6):hover {
+        color: #fff;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 15px #fff;
+        text-shadow: 0 0 15px #fff;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-open-button {
+    z-index: 2;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 400ms;
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+}
+
+    .menu-open-button:hover {
+        transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    }
+
+.menu-open:checked + .menu-open-button {
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+    .menu-open:checked ~ .menu-item:nth-child(3) {
+        transition-duration: 190ms;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    .menu-open:checked ~ .menu-item:nth-child(4) {
+        transition-duration: 290ms;
+        transform: translate3d(0, -130px, 0);
+    }
+
+    .menu-open:checked ~ .menu-item:nth-child(5) {
+        transition-duration: 390ms;
+        transform: translate3d(0, -200px, 0);
+    }
+
+    .menu-open:checked ~ .menu-item:nth-child(6) {
+        transition-duration: 490ms;
+        transform: translate3d(0, -270px, 0);
+    }
+
+
+
+/* ------------------------------------ Media Queries -------------------------------------------*/
+@media (max-width: 650px) {
+    .glass-login.container {
+        width: 80vw;
+    }
+
+    .login-title {
+        font-size: 30px;
+    }
+
+    .glass-cadastro.container {
+        width: 80vw;
+    }
+
+    .cadastro-title {
+        font-size: 10px;
+    }
+
+    .btn-src {
+        font-size: 12px;
+        width: 6rem;
+    }
+
+    .btn-download {
+        width: 80vW;
+        margin-left: 19px;
+    }
+
+    .search-bar {
+        width: 75vw;
+        align-items: center;
+    }
+
+    .home {
+        display: flex;
+        align-content: center;
+        align-items: center; /*horizontal*/
+        justify-content: space-between; /*vertical*/
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .linha {
+        font-size: 0.6rem;
+    }
+
+    .name, .linha {
+        display: flex;
+        align-items: center; /* alinhamento vertical*/
+        justify-content: start;
+        margin-left: 4rem;
+    }
+
+    .menu {
+        right: 3px;
+    }
+
+    .tabfoguete {
+        display: none;
+    }
+
+    .menu-item, .menu-open-button {
+        line-height: 30px;
+    }
+
+    .glass-aboutUs {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-bar {
+        width: 62vw;
+    }
+
+    .foguetao {
+        width: 200px;
+        height: 200px;
+        margin-left: 1rem;
+    }
+}
