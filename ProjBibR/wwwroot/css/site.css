@@ -127,18 +127,30 @@ input {
     box-sizing: border-box;
     backdrop-filter: blur(4px);
     height: 2rem;
-    width: 65vw;
+    width: 30vw;
     background: rgba(196, 196, 196, 0.16);
     border: 1px solid #A64DFF;
     color: #13D6E2;
     font-size: 14px;
     padding-left: 0.5rem;
     font-family: 'IBM Plex Mono', monospace;
+    animation: barrinha 1.5s ease-in-out forwards;
 }
 
     .search-bar:focus {
         outline: 0;
     }
+
+@keyframes barrinha{
+    from {
+        transform: scaleX(0.5) translateX(8rem);
+    }
+    to {
+        transform: scaleX(1.5);
+        width: 40vw;
+    }
+}
+
 
 .pesquisa {
     text-align: center;
@@ -156,12 +168,22 @@ input {
     box-sizing: border-box;
     backdrop-filter: blur(8px);
     font-size: 15px;
+    animation: proladinho 1.5s ease-in-out forwards;
+}
+
+@keyframes proladinho {
+    from {
+        transform: translateX(0rem)
+    }
+
+    to {
+        transform: translateX(10rem)
+    }
 }
 
 .btn-download {
     margin-left: 5rem;
-    width: 12rem;
-    height: 3rem;
+    height: 4rem;
     color: #B5FF00;
     background: rgba(196, 196, 196, 0.1);
     border: 1px solid #B5FF00;
@@ -176,6 +198,11 @@ input {
     .btn-download:hover {
         background: #B5FF00;
         color: #030303;
+    }
+
+    .btn-download-text{
+        font-size:1.5rem;
+        font-weight:600;
     }
 
 
@@ -698,6 +725,7 @@ input-neon {
     .btn-src {
         font-size: 12px;
         width: 6rem;
+        animation: none;
     }
 
     .btn-download {
@@ -708,6 +736,7 @@ input-neon {
     .search-bar {
         width: 75vw;
         align-items: center;
+        animation: none;
     }
 
     .home {
@@ -726,7 +755,9 @@ input-neon {
     .linha {
         font-size: 0.6rem;
     }
-
+    efeito-digitacao{
+        animation:none;
+    }
     .name, .linha {
         display: flex;
         align-items: center; /* alinhamento vertical*/
