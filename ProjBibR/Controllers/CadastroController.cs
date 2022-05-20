@@ -17,7 +17,7 @@ namespace ProjBibR.Controllers
         // GET: CadastroController
         public ActionResult Cadastrar()
         {
-            return View(db.Users.ToList());
+            return View();
         }
 
         // GET: CadastroController/Details/5

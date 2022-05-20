@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Fale Conosco - BibR";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item "><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page" style="color:#b5ff00">Fale Conosco</li>
+    </ol>
+</nav>
+<section div="FaleConosco">
+    <div class="container-faleConosco">
+        <div class="title">
+            <h1>Como você prefere falar conosco? </h1>
+        </div>
+
+        <div class="cards">
+            <div class="col-4 card-email">
+                <i class="fa-regular fa-envelope"></i>
+                <h2>E-mail</h2>
+                <p>Tem alguma dúvida ou sugestão?</p>
+                <a href="mailto:bibrcontact@gmail.com.br">bibrcontact@gmail.com.br</a>
+            </div>
+            <div class="col-4 card-tel">
+                <i class="fa-regular fa-phone-volume"></i>
+                <h2>Telefone</h2>
+                <p>Você pode ligar a qualquer hora.</p>
+                <a href="tel:+5571999999999">(16) 99999-9999</a>
+            </div>
+            <div class="col-4 card-chat">
+                <div class="chatbot">
+                    <div class="chatbot__loading"></div>
+                    <div class="chatbot__loading"></div>
+                    <div class="chatbot__loading"></div>
+                </div>
+                <h2>Chat</h2>
+                <p>Precisa de uma ajuda agora?</p>
+                <a href="#">Basta abrir o chat</a>
+            </div>
+        </div>
+    </div>
+</section>

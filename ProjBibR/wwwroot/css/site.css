@@ -17,7 +17,8 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: linear-gradient(180.9deg, #030303 31.24%, #4E1471 99.23%);
+    background: rgb(2,1,116);
+    background: linear-gradient(0deg, rgba(2,1,116,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 * {
@@ -52,8 +53,8 @@ input {
 }
 
 .navbar {
-    background: rgb(0, 0, 0, 0,28);
-    backdrop-filter: blur(20px);
+    background-color: #01001fc2;
+    backdrop-filter: blur(10px);
     font-size: 10px;
 }
 
@@ -86,12 +87,45 @@ input {
     width: 50%;
 }
 
-.foguetao {
-    margin-left: -16rem;
+.lua {
+    margin-top: 50%;
+    margin-left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    /*efeito de sombreamento*/
+    box-shadow: 0 0 15px rgba(0,155,255,0.5), 0 0 30px rgba(0,155,255,0.5), 0 0 45px rgba(0,155,255,0.5), 0 0 60px rgba(0,155,255,0.5), 0 0 10px rgba(0,155,255,0.5);
+}
+
+.foguete {
+    margin-top: -50%;
+    margin-left: -200%;
+    position: absolute;
+    transform-origin: 300px 200px;
+    animation: foguete 10s linear infinite;
+}
+
+.foguete img{
+
     margin-top: 8rem;
-    width: 300px;
-    height: 300px;
-    filter: drop-shadow(0px 4px 4px #13D6E2);
+    width: 85px;
+    height: 85px;
+}
+
+@keyframes foguete {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .name, .linha {
@@ -268,7 +302,7 @@ input {
     .news.section::-webkit-scrollbar-thumb { /*o proprio scroll*/
         background-color: #;
         border-radius: 20px;
-        border: 10px solid #00000000;
+        border: 15px transparent #00000000;
         width: 3px;
         height: 3px;
     }
@@ -288,17 +322,23 @@ input {
     height: 14rem;
 }
 /*==============================   About Us   =============================*/
-.aboutUs {
-    padding-bottom: 5rem;
-}
-
 #aboutUs {
+    height: 60vh;
+}
+.container-aboutUS{
+    margin-top: 14rem;
+    height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.glass-aboutUs {
+    height: 400px;
+    width: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.glass-aboutUs {
+    cursor: pointer;
     text-align: justify;
     font-family: 'IBM Plex Mono', monospace;
     width: 40%;
@@ -308,19 +348,82 @@ input {
     border: 2px solid #A64DFF;
     background: #c4c4c442;
     box-shadow: 0 0 5px #A64DFF;
-    box-shadow: 0 0 25px #A64DFF;
-    box-shadow: 0 0 30px #A64DFF;
     backdrop-filter: blur(50px);
-    padding-top: 2rem;
-    margin-top: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-bottom: 4rem;
+    transition: 0.3s;
 }
 
-.title-aboutUs {
+.aboutUs{
     text-align: center;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column; /*define um embaixo do outro*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+    .aboutUs::before {
+        content: '';
+        position: absolute; /*sua posição vai ficar absoluta a sua div pai*/
+        height: 100px;
+        width: 100px;
+        display: block;
+        border: 1px solid #A64DFF;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #A64DFF;
+        box-shadow: 0 0 25px #A64DFF;
+        box-shadow: 0 0 30px #A64DFF;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .aboutUs h2 {
+        transition: 0.3s;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+.glass-aboutUs:hover, aboutUs h2 {
+    filter: unset;
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+}
+
+    .glass-aboutUs:hover > .aboutUs::before { /*div filha*/
+        height: 28rem;
+        width: 32rem;
+        opacity: 1;
+    }
+
+/*---------------------- Fale Conosco ---------------------*/
+
+.container-faleConosco{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+    .container-faleConosco h1 {
+        margin-top: 3rem;
+        text-align:center;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        font-family: 'Press Start 2P';
+        color: #13D6E2;
+        text-shadow: 0px 4px 10px #13D6E2;
+    }
+
+.cards{
+    display:flex;
+    margin-top: 12rem;
+    justify-content:space-between;
+    align-items:center;
 }
 /*---------------------- Rodapé ---------------------*/
 footer {
