@@ -15,7 +15,7 @@ namespace ProjBibR.Controllers
         }
 
         // GET: CadastroController
-        public ActionResult Cadastrar()
+        public ActionResult index()
         {
             return View();
         }
@@ -41,7 +41,7 @@ namespace ProjBibR.Controllers
             {
                 db.Users.Add(collection);
                 db.SaveChanges();
-                return RedirectToAction(nameof(Cadastrar));
+                return RedirectToAction("index","home");
             }
             catch
             {
@@ -62,7 +62,7 @@ namespace ProjBibR.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Cadastrar));
+                return RedirectToAction("index", "home");
             }
             catch
             {
@@ -83,7 +83,7 @@ namespace ProjBibR.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Cadastrar));
+                return RedirectToAction("index", "home");
             }
             catch
             {
