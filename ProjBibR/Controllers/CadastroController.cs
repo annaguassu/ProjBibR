@@ -15,7 +15,7 @@ namespace ProjBibR.Controllers
         }
 
         // GET: CadastroController
-        public ActionResult index()
+        public ActionResult Index()
         {
             return View();
         }
