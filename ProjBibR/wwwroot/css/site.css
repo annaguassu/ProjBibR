@@ -272,7 +272,7 @@ input {
 /*==============================   News   =============================*/
 .title-News, .title-aboutUs {
     font-size: 1.2rem;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', cursive;
     color: #13D6E2;
     text-shadow: 0px 4px 10px #13D6E2;
 }
@@ -319,7 +319,16 @@ input {
     color: #B5FF00;
     border-radius: 5px;
     border: 2px solid #A64DFF;
-    height: 14rem;
+    height: 18rem;
+    
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+.card-img-top{
+    height:8rem;
 }
 /*==============================   About Us   =============================*/
 #aboutUs {
@@ -414,29 +423,53 @@ input {
         text-align:center;
         font-size: 3rem;
         letter-spacing: 3px;
-        font-family: 'Press Start 2P';
+        font-family: 'Press Start 2P', cursive;
         color: #13D6E2;
         text-shadow: 0px 4px 10px #13D6E2;
     }
+.iconspeak {
+    font-size: 3rem;
+    color: white;
+    transform: translateY(0);
+    animation: chatTranslate 2s ease-in-out infinite;
+}
+.titulin {
+    color: white;
+    font-size: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.p{
+    margin-top: 6.5rem;
+}
 
 .cards{
     display:flex;
-    margin-top: 12rem;
+    margin-top: 9rem;
     justify-content:space-between;
     align-items:center;
 }
-#card-tel h2 p{
-    color: #13D6E2;
+
+.cards p{
+    color: white;
 }
 
 #fa-envelope{
     font-size:10rem;
 }
 
-
+.iconspeak,.chatbox{
+    margin-bottom:4rem;
+    margin-left: 3rem;
+}
 .card-chat {
     justify-content: center;
     align-items: center;
+}
+
+.card-email, .card-tel, .card-chat{
+    border-right:1px solid #fff;
+    border-
 }
 
 .chatbot {
@@ -451,7 +484,7 @@ input {
     position: relative;
     transform: translateY(0);
     animation: chatTranslate 2s ease-in-out infinite;
-    margin-bottom: 3rem;
+    margin-left: 3rem;
 }
 
 .chatbot::before { /*triângulo*/
