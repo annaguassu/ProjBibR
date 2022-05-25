@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="~/BibR.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css">
     <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <link REL="SHORTCUT ICON" HREF="~/css/img/logojogo.png">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BibR</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img id="logo" src="~/css/img/Logo.png" /><span class="nome_logo"> BibR</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -31,12 +34,12 @@
                         </a>
                     </div>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                    <ul class="navbar-nav flex-grow-1" style="justify-content:end;">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logar">Entrar</a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="navbar-nav flex-grow-1" style="justify-content:end;">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logar">Entrar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

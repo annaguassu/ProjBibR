@@ -41,7 +41,20 @@ header {
     position:absolute;
     z-index: 1000;
     position:absolute;
+
+
 }
+
+#logo{
+    width: 60px;
+    height:60px;
+}
+
+.navbar-brand .nome_logo{
+    color: #b5ff00;
+    font-family: 'Press Start 2P', cursive;
+}
+
 .navbar-nav a{
     color: #b5ff00;
 }
@@ -233,7 +246,6 @@ nav-login{
     min-height: 100vh;
     position: relative;
     padding: 100px;
-    background-color: #01081D;
     margin-left: -8.5rem;
     margin-right: -8.5rem;
 }
