@@ -250,8 +250,9 @@ nav-login{
     margin-right: -8.5rem;
 }
 
-    .sec h2 {
+    .sec .title-News {
         color: #13D6E2;
+        margin-left: 22rem;
     }
 
 .title-News, .title-aboutUs {
@@ -263,6 +264,8 @@ nav-login{
 
 .news.section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
     overflow-x: scroll;
     margin-top: 3rem;
