@@ -5,13 +5,13 @@
 <div id="tabSearch">
     <form class="pesquisa align-content-start align-items-start justify-content-start">
         <div>
-            <input type="search" class="search-bar" aria-label="Pesquisar" />
+            <input type="search" onkeyup="search()" id="search-bar" class="search-bar" aria-label="Pesquisar" />
             <button type="submit" class="btn-src">Pesquisar</button>
         </div>
     </form>
 </div>
 
-<section class="parallax-scrolling col-lg-12">
+<section class="parallax-scrolling">
     <img src="~/css/img/stars.png" id="stars" />
     <img src="~/css/img/moon.png" id="moon" />
     <img src="~/css/img/mountains_behind.png" id="mountains_behind" />
@@ -28,7 +28,7 @@
             <li>
                 <div class="posts" style="width: 17rem;">
                     <img class="card-img-top" src="~/css/img/planets.jpg" alt="Imagem de capa do card">
-                    <a href="#">
+                    <a href="#" class="card-link">
                         <h5 class="card-title">Novos Planetas</h5>
                         <p class="card-text">Conheça Miller, Vulcan e Gallifrey: os novos planetas de Missão Astro</p>
                     </a>
@@ -38,7 +38,7 @@
                 <div class="posts" style="width: 17rem;">
                     <img class="card-img-top" src="~/css/img/purplemonster.jpg" alt="Imagem de capa do card">
 
-                    <a href="#">
+                    <a href="#" class="card-link">
                         <h5 class="card-title">Monstros Neonlatic</h5>
                         <p class="card-text">Novos monstros ainda mais assustadores</p>
                     </a>
@@ -47,7 +47,7 @@
             <li>
                 <div class="posts" style="width: 17rem;">
                     <img class="card-img-top" src="~/css/img/mars.jpg" alt="Imagem de capa do card">
-                    <a href="#">
+                    <a href="#" class="card-link">
                         <h5 class="card-title">Atualização do Patch 6.22</h5>
                         <p class="card-text">Novidades e correções. Vem dar uma olhada no que mudou!</p>
                     </a>
@@ -56,7 +56,7 @@
             <li>
                 <div class="posts" style="width: 17rem;">
                     <img class="card-img-top" src="~/css/img/flyingwhale.jpg" alt="Imagem de capa do card">
-                    <a href="#">
+                    <a href="#" class="card-link">
                         <h5 class="card-title">Skins Darklatic</h5>
                         <p class="card-text">Agora você pode literalmente andar com o lado negro.</p>
                     </a>
@@ -65,7 +65,7 @@
             <li>
                 <div class="posts" style="width: 17rem;">
                     <img class="card-img-top" src="~/css/img/forum.jpg" alt="Imagem de capa do card">
-                    <a href="#">
+                    <a href="#" class="card-link">
                         <h5 class="card-title">Novo Fórum Missão Astro</h5>
                         <p class="card-text">No novo fórum do Missão Astro, tire suas dúvidas, faça amizades e ajude outros jogadores :)</p>
                     </a>
@@ -116,6 +116,33 @@
         </div>
     </div>
 </section>
+
+<footer>
+    <div>
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <img id="logo" src="~/css/img/Logo.png" />
+        </a>
+    </div>
+    <div class="copyright" style="text-align:center;">
+         <div class="rodape-nav">
+            <a href="#news" class="nav-link">
+                Novidades&nbsp
+            </a>
+            <a class="nav-link">
+                Sobre Nós&nbsp
+            </a>
+            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="FaleConosco">
+                Fale Conosco&nbsp
+            </a>
+            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logar">
+                Entrar&nbsp
+            </a>
+         </div>
+         <div class="copyright">
+            <p>&#169; 2022 Copyright - BibR</p>
+        </div>
+    </div>
+</footer>
 </div>
 
 <div class="menu">
@@ -127,7 +154,7 @@
         <span class="hamburger hamburger-3"></span>
     </label>
     <a href="#tabSearch" class="menu-item" alt="Topo"> <i class="fa-solid fa-arrow-up"></i></a>
-    <a asp-controller="Login" asp-action="Logar" class="menu-item"> <i class="fa-light fa-circle-user"></i> </a>
+    <a asp-controller="Login" asp-action="Logar" class="menu-item"> <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">

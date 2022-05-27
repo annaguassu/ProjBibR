@@ -1,24 +1,22 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&family=Roboto:wght@300&display=swap');
 
-
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
     font-family: 'IBM Plex Mono', monospace;
-    font-size:14px;
+    font-size: 14px;
     scroll-behavior: smooth;
 }
 
 body {
     min-height: 100vh;
-    margin-bottom: 60px;
     background: linear-gradient(#2b1055, #06080c);
     overflow-x: hidden;
 }
 
-input {
-    outline: 0;
+.input{
+    outline:0;
 }
 
 *::-webkit-scrollbar {
@@ -37,74 +35,76 @@ input {
 }
 
 /*-------------Barra de Navegação--------------*/
-header {
+
+header{
     position:absolute;
     z-index: 1000;
-    position:absolute;
-
-
 }
 
 #logo{
-    width: 60px;
-    height:60px;
+    width:40px;
 }
 
 .navbar-brand .nome_logo{
-    color: #b5ff00;
     font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    background-image: linear-gradient(to left, #2dbdff, #a64dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
-.navbar-nav a{
+.navbar-nav a {
+    color: #b5ff00;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar-nav a:focus {
     color: #b5ff00;
 }
 
-.navbar-nav a:hover {
-    color: #53b5fd;
+.navbar-nav a:hover{
+    color:#53b5fd;
 }
 
-nav-login{
-    justify-content:end;
-    text-align:end;
-}
-
-.navbar {
+.navbar{
     background-color: #01001f42;
-    backdrop-filter: blur(10px);
+    backdrop-filter:blur(10px);
     font-size: 10px;
-    z-index: 1;
+    z-index:1000;
 }
 
-.breadcrumb {
+.breadcrumb{
     margin-top: 7rem;
 }
 
-    .breadcrumb-item.active, .breadcrumb ol {
-        color: #b5ff00;
-    }
+.breadcrumb-item.active, .breadcrumb ol {
+    color: #b5ff00;
+}
 
-.fa-bars {
+.fa-bars{
     color: #b5ff00;
     font-size: 20px;
 }
 
-.navbar-toggler:focus {
-    border: 0;
-    outline: 0;
+.navbar-toggler:focus{
+    border:0;
+    outline:0;
 }
 
 /*---------------Página Inicial-----------------*/
-.tabSearch {
+#tabSearch{
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content:center;
 }
 
 .search-bar {
     margin-top: 6rem;
-    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 5px #a64dff;
     box-shadow: 0 0 15px #A64DFF;
     box-sizing: border-box;
     backdrop-filter: blur(4px);
@@ -119,9 +119,9 @@ nav-login{
     animation: barrinha 1.5s ease-in-out forwards;
 }
 
-    .search-bar:focus {
-        outline: 0;
-    }
+.search-bar:focus{
+    outline:0;
+}
 
 @keyframes barrinha {
     from {
@@ -133,7 +133,6 @@ nav-login{
         width: 40vw;
     }
 }
-
 
 .pesquisa {
     text-align: center;
@@ -160,7 +159,7 @@ nav-login{
     }
 
     to {
-        transform: translateX(10rem)
+        transform: translateX(10.5rem)
     }
 }
 
@@ -175,15 +174,15 @@ nav-login{
     overflow: hidden;
 }
 
-    .parallax-scrolling::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to top, #01081D, transparent);
-        z-index: 1000;
-    }
+.parallax-scrolling::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #01081D, transparent);
+    z-index: 1000;
+}
 
     .parallax-scrolling img {
         position: absolute;
@@ -195,24 +194,22 @@ nav-login{
         pointer-events: none;
     }
 
-    .parallax-scrolling img#moon {
+        .parallax-scrolling img#moon {
             mix-blend-mode: screen;
+        }
 
-    }
-
-    .parallax-scrolling img#mountains_front {
+        .parallax-scrolling img#mountains_front {
             z-index: 10;
-    }
-
+        }
         .parallax-scrolling img#stars {
-            height:100%;
+            height: 100%;
         }
 
 .name {
     color: #b5ff00;
     font-family: 'Press Start 2P', cursive;
     position: absolute;
-    right: 250px;
+    text-align: center;
     white-space: nowrap;
     font-size: 5vw;
     z-index: 9;
@@ -230,7 +227,6 @@ nav-login{
     font-weight: 600;
     z-index: 9;
     transform: translateY(150px);
-    margin-left: 30rem;
 }
 
     #btn:hover {
@@ -238,22 +234,12 @@ nav-login{
         color: #030303;
     }
 
-
-
 /*==============================   News   =============================*/
-
 .sec {
     min-height: 100vh;
     position: relative;
     padding: 100px;
-    margin-left: -8.5rem;
-    margin-right: -8.5rem;
 }
-
-    .sec .title-News {
-        color: #13D6E2;
-        margin-left: 22rem;
-    }
 
 .title-News, .title-aboutUs {
     font-size: 1.2rem;
@@ -281,8 +267,8 @@ nav-login{
         background: #00000000;
         border-radius: 20px;
         width: 3px;
-        margin
     }
+
 
     .news.section::-webkit-scrollbar-thumb { /*o proprio scroll*/
         border: 2px solid #A64DFF;
@@ -306,9 +292,19 @@ nav-login{
     color: #B5FF00;
     border: 2px solid #A64DFF;
     height: 18rem;
+    text-align: center;
+}
+.posts:hover{
+    width: 17.5rem;
+    height:17.5rem;
+}
+.posts a{
+    color: #b5ff00;
 }
 
-
+    .posts a:hover {
+        color: #2dbdff;
+    }
 .card-img-top {
     height: 8rem;
 }
@@ -335,9 +331,10 @@ nav-login{
     cursor: pointer;
     text-align: justify;
     font-family: 'IBM Plex Mono', monospace;
-    width: 40%;
+    width: 40vw;
     height: 100%;
     color: #B5FF00;
+    font-weight: 600;
     border-radius: 5px;
     border: 2px solid #A64DFF;
     background: #c4c4c442;
@@ -389,12 +386,10 @@ nav-login{
 }
 
     .glass-aboutUs:hover > .aboutUs::before { /*div filha*/
-        height: 28rem;
-        width: 32rem;
+        height: 60vh;
+        width: 45vw;
         opacity: 1;
     }
-
-
 
 /*---------------------- Fale Conosco ---------------------*/
 
@@ -539,57 +534,38 @@ nav-login{
         transform: translateY(0);
     }
 }
+
 /*---------------------- Rodapé ---------------------*/
 footer {
-    position: absolute;
-    bottom: 0;
-    margin-top: 5rem;
+    color: #53b5fd;
+    margin-bottom: -12rem;
+    position: absolute; /* posição absoluta */
+    bottom: 0; /* Fixa a div no fim da página */
+    width: 100%; /* Largura estende por toda página da div */
+    height: 200px; /* Altura da div */
 }
 
-/*-------------------Animação Rodapé-----------------
-.waves {
-    height: 10rem;
-    width: 100vw;
+
+.rodape-nav {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
 }
-.parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+
+.rodape-nav a{
+    margin-right: 1.5rem;
+    transition: 0.3s;
 }
-.parallax > use:nth-child(1) {
-        animation-delay: -2s;
-        animation-duration: 7s;
+
+.rodape-nav a:hover{
+    transform:translateY(-3px);
+    color: #b5ff00;
 }
-.parallax > use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-        animation-delay: -5s;
-        animation-duration: 20s;
-}
-@keyframes move-forever {
-    0% {
-        transform: translate3d(-90px, 0, 0);
-    }
-    100% {
-        transform: translate3d(85px, 0, 0);
-    }
-}
-@media (max-width: 575.98px) {
-    .waves {
-        height: 80px;
-        width: 100vw;
-        min-height: 40px;
-    }
-}
+
 /*==============================   Login Page   =============================*/
-
-.btn:focus {
-    border-style: none;
-    border: 0;
+.btn:focus{
+    border-style:none;
+    border:0;
 }
 
 .btn-login.btn {
@@ -649,25 +625,12 @@ footer {
     margin-top: 2rem;
     justify-items: center;
     text-align: center;
-    color: #13D6E2;
-    text-shadow: 0px 4px 10px #13D6E2;
+    color: #53b5fd;
     margin-bottom: 2rem;
 }
 
-    .linkCadastro:hover {
-        color: #b5ff00;
-    }
-
-.ocultar {
-    display: none;
-}
-
-i {
-    cursor: pointer;
-}
-
-.formulario-login {
-    margin-top: 2rem;
+.linkCadastro:hover {
+    color: #b5ff00;
 }
 
 .ocultar {
@@ -678,15 +641,6 @@ i {
     cursor: pointer;
 }
 
-a {
-    color: #13D6E2;
-    text-align: center;
-}
-
-    a:hover {
-        text-shadow: 0px 4px 10px #13D6E2;
-        color: #13D6E2;
-    }
 /*==============================   Register Page   =============================*/
 .glass-cadastro.container {
     font-family: 'IBM Plex Mono', monospace;
@@ -742,6 +696,7 @@ input-neon {
     text-align: center;
 }
 
+
 /*================= Botão Flutuante =================*/
 .menu { /*o bagulho todo*/
     filter: url("#shadowed-goo");
@@ -769,12 +724,11 @@ input-neon {
     position: absolute;
     color: #fff;
     text-align: center;
-    line-height: 35px; /*alinhamento dos icones dentro dos botões*/
+    line-height: 30px; /*alinhamento dos icones dentro dos botões*/
     transform: translate3d(0, 0, 0);
     transition: transform ease-out 200ms;
     margin-bottom: 3rem;
 }
-
 
 .hamburger { /*O simbolo inicial "3 risquinhos"*/
     width: 20px;
@@ -919,24 +873,14 @@ input-neon {
         transform: translate3d(0, -270px, 0);
     }
 
-
-
 /* ------------------------------------ Media Queries -------------------------------------------*/
 @media (max-width: 650px) {
-    .glass-login.container {
+    .glass-login.container{
         width: 80vw;
-    }
-
-    .login-title {
-        font-size: 30px;
     }
 
     .glass-cadastro.container {
         width: 80vw;
-    }
-
-    .cadastro-title {
-        font-size: 10px;
     }
 
     .btn-src {
@@ -945,60 +889,13 @@ input-neon {
         animation: none;
     }
 
-    .btn-download {
-        width: 80vW;
-        margin-left: 19px;
-    }
-
     .search-bar {
         width: 75vw;
         align-items: center;
         animation: none;
     }
 
-    .home {
-        display: flex;
-        align-content: center;
-        align-items: center; /*horizontal*/
-        justify-content: space-between; /*vertical*/
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .name {
-        font-size: 3rem;
-    }
-
-    .linha {
-        font-size: 0.6rem;
-    }
-
-    efeito-digitacao {
-        animation: none;
-    }
-
-    .name, .linha {
-        display: flex;
-        align-items: center; /* alinhamento vertical*/
-        justify-content: start;
-        margin-left: 4rem;
-    }
-
-    .menu {
-        right: 3px;
-    }
-
-    .tabfoguete {
-        display: none;
-    }
-
-    .menu-item, .menu-open-button {
-        line-height: 30px;
-    }
-
-    .glass-aboutUs {
-        width: 90%;
-    }
 }
 
 @media (max-width: 1024px) {
@@ -1012,51 +909,3 @@ input-neon {
         margin-left: 1rem;
     }
 }
-
-/*
-.tabfoguete {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
-.lua {
-    margin-top: 50%;
-    margin-left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    transform: translate(-50%,-50%);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: #fff;
-box-shadow: 0 0 15px rgba(0,155,255,0.5), 0 0 30px rgba(0,155,255,0.5), 0 0 45px rgba(0,155,255,0.5), 0 0 60px rgba(0,155,255,0.5), 0 0 10px rgba(0,155,255,0.5);
-}
-
-.foguete {
-    margin-top: -50%;
-    margin-left: -200%;
-    position: absolute;
-    transform-origin: 300px 200px;
-    animation: foguete 8s linear infinite;
-}
-
-    .foguete img {
-        margin-top: 8rem;
-        width: 85px;
-        height: 85px;
-    }
-
-@keyframes foguete {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-*/

@@ -26,14 +26,14 @@
                         <a href="#news" class="nav-link">
                             Novidades
                         </a>
-                        <a class="nav-link">
+                        <a href="#aboutUs" class="nav-link">
                             Sobre Nós
                         </a>
                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="FaleConosco">
                             Fale Conosco
                         </a>
                     </div>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
                         <ul class="navbar-nav flex-grow-1" style="justify-content:end;">
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logar">Entrar</a>
@@ -46,14 +46,15 @@
     </header>
 
     <div class="container-fluid">
-        <main role="main">
+        <main role="main" >
             @RenderBody()
+           
         </main>
+
+       
     </div>
 
-    <footer>
-       
-    </footer>
+     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
