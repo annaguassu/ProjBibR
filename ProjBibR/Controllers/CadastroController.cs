@@ -39,6 +39,8 @@ namespace ProjBibR.Controllers
         {
             try
             {
+                
+
                 db.Users.Add(collection);
                 db.SaveChanges();
                 return RedirectToAction("index","home");
