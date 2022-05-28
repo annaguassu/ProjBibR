@@ -20,6 +20,7 @@ namespace ProjBibR.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 

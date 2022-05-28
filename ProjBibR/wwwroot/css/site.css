@@ -75,6 +75,62 @@ header{
     font-size: 10px;
     z-index:1000;
 }
+.botao {
+    margin-top: 0.5rem;
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+    .botao .btn-receive { /*texto do btn*/
+        text-transform: uppercase;
+        font-size: 16px;
+        position: relative;
+        z-index: 0;
+        background: #b5ff00;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        transition: 0.3s;
+    }
+
+    .botao:hover::after, .botao .btn-receive:hover {
+        background: #53b5fd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .botao:before {
+        content: '';
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+    }
+
+.botao:after {
+   content: '';
+    background: transparent;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    position: absolute;
+    border-radius: 8px;
+    z-index: -1;
+}
 
 .breadcrumb{
     margin-top: 7rem;
@@ -159,7 +215,7 @@ header{
     }
 
     to {
-        transform: translateX(10.5rem)
+        transform: translateX(10vw)
     }
 }
 
@@ -398,8 +454,16 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-height: 80vh;
+    overflow-y: hidden;
 }
 
+.container-img-faleConosco img{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+}
     .container-faleConosco h1 {
         margin-top: 3rem;
         text-align: center;
@@ -434,8 +498,22 @@ header{
     align-items: center;
 }
 
-    .cards p {
+.cartao{
+    margin-left: 3rem;
+}
+
+.cartao a{
+    color:#53b5fd;
+    transition: 0.3s;
+}
+
+    .cartao a:hover {
+        color:#b5ff00;
+    }
+
+        .cards p {
         color: white;
+        font-size:1.5rem;
     }
 
 #fa-envelope {
@@ -452,9 +530,8 @@ header{
     align-items: center;
 }
 
-.card-email, .card-tel, .card-chat {
+.card-email, .card-tel {
     border-right: 1px solid #fff;
-    border-
 }
 
 .chatbot {
@@ -545,7 +622,9 @@ footer {
     height: 200px; /* Altura da div */
 }
 
-
+.logo{
+    margin-left: -6rem;
+}
 .rodape-nav {
     display: flex;
     justify-content: center;
@@ -895,7 +974,9 @@ input-neon {
         animation: none;
     }
 
-
+    .parallax-scrolling h2{
+        font-size: 10vw;
+    }
 }
 
 @media (max-width: 1024px) {
