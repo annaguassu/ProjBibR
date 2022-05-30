@@ -560,6 +560,7 @@ header{
         border-left: 2px solid transparent;
         border-right: 10px solid transparent;
         border-top: 10px solid #fff;
+        z-index: 1;
     }
 
 .chatbot__loading {
