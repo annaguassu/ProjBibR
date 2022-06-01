@@ -43,11 +43,11 @@ namespace ProjBibR.Controllers
 
                 db.Users.Add(collection);
                 db.SaveChanges();
-                return RedirectToAction("index","home");
+                return RedirectToAction("login","logar");
             }
             catch
             {
-                return View();
+                return Redirect("/Login/Logar");
             }
         }
 

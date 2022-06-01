@@ -6,56 +6,64 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item "><a asp-controller="Home" asp-action="Index">Home</a></li>
-        <li class="breadcrumb-item"><a asp-controller="Login" asp-action="Logar">Login</a></li>
         <li class="breadcrumb-item active" aria-current="page" style="color:#b5ff00">Cadastro</li>
     </ol>
 </nav>
-<div class="align-content-center">
-    <div class="glass-cadastro container">
-        <h1 class="cadastro-title">Cadastro</h1>
-        <p class="receive">Receba promoções e novidades na sua caixa de e-mail</p>
+    <div class="align-content-center">
+        <img id="alien" src="~/css/img/alien.png" />
+        <img id="planeta-terra" src="~/css/img/planeta-terra.png" />
+        <img id="planeta" src="~/css/img/planeta.png" />
+        <img id="jupiter" src="~/css/img/jupiter.png" />
+        <img id="star1" src="~/css/img/estrelas-de-natal.png" />
+        <img id="star2" src="~/css/img/estrelas-de-natal.png" />
+        <img id="star3" src="~/css/img/estrelas-de-natal.png" />
+        <img id="star5" src="~/css/img/estrelas-de-natal.png" />
+        <img id="star4" src="~/css/img/estrelas-de-natal.png" />
 
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label for="form-control" class="control-label input-neon">Nome Completo</label>
-                <input asp-for="name" class="form-control" required />
-                <span asp-validation-for="name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="form-control" class="control-label input-neon">Idade</label>
-                <input type="number" asp-for="age" class="form-control " required/>
-                <span asp-validation-for="age" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="form-control" class="control-label input-neon">Celular</label>
-                <input type="tel" asp-for="tel" class="form-control" required/>
-                <span asp-validation-for="tel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="form-control" class="control-label input-neon">E-mail</label>
-                <input type="email" asp-for="email" class="form-control" required/>
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="form-control" class="control-label input-neon">Crie uma senha</label>
-                <input type="password" asp-for="password" id="senha" class="form-control" required />
-                <i class="fa-solid fa-eye mostrar"></i>
-                <i class="fa-solid fa-eye-slash ocultar"></i>
-                <span asp-validation-for="password" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="terms" required/> Aceito os <a>termos de uso</a>
-                </label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Enviar" class="btn btn-cadastro col-12" />
-            </div>
-        </form>
+
+
+        <div class="glass-cadastro container">
+            <h1 class="cadastro-title">Cadastro</h1>
+            <p class="receive">Receba promoções e novidades na sua caixa de e-mail</p>
+       
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label for="form-control" class="control-label input-neon">Nome Completo</label>
+                    <input asp-for="name" class="form-control" required />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="form-control" class="control-label input-neon">Idade</label>
+                    <input type="number" asp-for="age" class="form-control " required/>
+                    <span asp-validation-for="age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="form-control" class="control-label input-neon">Celular</label>
+                    <input type="tel" asp-for="tel" class="form-control" required/>
+                    <span asp-validation-for="tel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="form-control" class="control-label input-neon">E-mail</label>
+                    <input type="email" asp-for="email" class="form-control" required/>
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="form-control" class="control-label input-neon">Crie uma senha</label>
+                    <input type="password" asp-for="password" id="senha" class="form-control" required />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="terms" required/> Aceito os <a>termos de uso</a>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn btn-cadastro col-12" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
 <div>
     <div class="menu">
         <input type="checkbox" href="index.html" class="menu-open" name="menu-open" id="menu-open" />
