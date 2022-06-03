@@ -486,7 +486,6 @@ dropdown-meu.show ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     max-height: 80vh;
     overflow-y: hidden;
 }
@@ -1049,7 +1048,7 @@ input-neon {
     filter: url("#shadowed-goo");
     z-index: 100;
     position: fixed;
-    right: 1px;
+    right: 25px;
     bottom: 40px;
     width: 5rem;
     height: 4rem;
@@ -1255,11 +1254,39 @@ input-neon {
     }
 
     .glass-aboutUs{
-        width: 110vw;
+        width: 30rem;
+        
     }
+
+    .aboutUs {
+        font-size: 3px;
+    }
+
+    .navbar-toggler{
+        margin-right:3rem;
+    }
+    .login-sucesso h3, .login-sucesso p{
+        text-align: center;
+    }
+        .login-sucesso{
+        margin-left: 0.5rem;
+        width: 80vw;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+        .container-faleConosco{
+            display: flex;
+            flex-direction: column;
+        }
 }
 
 @media (max-width: 1024px) {
+
+    body{
+        min-height: 100vh;
+    }
     .search-bar {
         width: 62vw;
     }
@@ -1268,5 +1295,9 @@ input-neon {
         width: 200px;
         height: 200px;
         margin-left: 1rem;
+    }
+
+    .glass-cadastro.container {
+        width: 80vw;
     }
 }
