@@ -1,7 +1,7 @@
 @model ProjBibR.Entidades.User
 
 @{
-    ViewData["Title"] = "Missão Astro - Cadastre-se";
+    ViewData["Title"] = "Cadastre-se";
 }
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -29,29 +29,28 @@
             <form asp-action="Create">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label for="form-control" class="control-label input-neon">Nome Completo</label>
-                    <input asp-for="name" class="form-control" required />
+                    
+                    <input asp-for="name" class="form-control" placeholder="Nome Completo" required />
                     <span asp-validation-for="name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="form-control" class="control-label input-neon">Idade</label>
-                    <input type="number" asp-for="age" class="form-control " required/>
+                  
+                    <input type="number" asp-for="age" placeholder="Idade" class="form-control " required/>
                     <span asp-validation-for="age" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="form-control" class="control-label input-neon">Celular</label>
-                    <input type="tel" asp-for="tel" class="form-control" required/>
+                   
+                    <input type="tel" asp-for="tel" placeholder="Celular" class="form-control" required/>
                     <span asp-validation-for="tel" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="form-control" class="control-label input-neon">E-mail</label>
-                    <input type="email" asp-for="email" class="form-control" required/>
+                   
+                    <input type="email" asp-for="email" placeholder="E-mail" class="form-control" required/>
                     <span asp-validation-for="email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="form-control" class="control-label input-neon">Crie uma senha</label>
-                    <input type="password" asp-for="password" id="senha" class="form-control" required />
-                    <span asp-validation-for="password" class="text-danger"></span>
+                    <input type="password" asp-for="password" id="senha" placeholder="Senha" class="form-control" required />
+                    <span asp-validation-for="password" class="text-danger">mínimo 8 letras</span>
                 </div>
                 <div class="form-group form-check">
                     <label class="form-check-label">

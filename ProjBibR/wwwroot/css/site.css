@@ -75,6 +75,36 @@ header{
     font-size: 10px;
     z-index:1000;
 }
+
+.dropdown {
+    animation: Translate 1s infinite;
+}
+
+@keyframes Translate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.dropdown-menu li {
+    background-color: #c4c4c442;
+}
+.dropdown-menu{
+    background-color: transparent;
+}
+
+dropdown-meu.show ul{
+    background: #c4c4c442;
+}
 .botao {
     margin-top: 0.5rem;
     display: inline-block;
@@ -89,8 +119,9 @@ header{
 }
 
     .botao .btn-receive { /*texto do btn*/
+        font-family: 'Press Start 2P', cursive;
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 10px;
         position: relative;
         z-index: 0;
         background: #b5ff00;
@@ -290,6 +321,8 @@ header{
         color: #030303;
     }
 
+
+
 /*==============================   News   =============================*/
 .sec {
     min-height: 100vh;
@@ -371,7 +404,7 @@ header{
 }
 
 .container-aboutUS {
-    margin-top: 14rem;
+    margin-top: 1rem;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -398,7 +431,7 @@ header{
     backdrop-filter: blur(50px);
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: -8rem;
     transition: 0.3s;
 }
 
@@ -467,7 +500,7 @@ header{
     .container-faleConosco h1 {
         margin-top: 3rem;
         text-align: center;
-        font-size: 3rem;
+        font-size: 2rem;
         letter-spacing: 3px;
         font-family: 'Press Start 2P', cursive;
         color: #13D6E2;
@@ -514,7 +547,7 @@ header{
 
         .cards p {
         color: white;
-        font-size:1.5rem;
+        font-size:1rem;
     }
 
 #fa-envelope {
@@ -648,7 +681,8 @@ header{
     display: grid;
     position: relative;
     grid-area: footer;
-    height:2rem;
+    height:0.5rem;
+    
 }
 
 .bubbles {
@@ -678,7 +712,7 @@ header{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 4rem;
-    padding: 2rem;
+    padding: 0.5rem;
     background: var(--footer-background);
 }
 
@@ -706,7 +740,12 @@ header{
 .redes-sociais i{
     color: #b5ff00;
     margin-right: 1rem;
+    transition: 0.3s;
 }
+    .redes-sociais i:hover {
+        color: #000;
+        transform: translateY(-0.5rem);
+    }
 div1 {
     display: flex;
     flex-direction: column;
@@ -994,7 +1033,17 @@ input-neon {
     text-align: center;
 }
 
+.form-control{
+    margin-bottom: 1.5rem;
+}
 
+#senha{
+    margin-bottom: -0rem;
+}
+
+.text-danger{
+    margin-bottom: 1rem;
+}
 /*================= Botão Flutuante =================*/
 .menu { /*o bagulho todo*/
     filter: url("#shadowed-goo");
@@ -1176,9 +1225,12 @@ input-neon {
     .glass-login.container{
         width: 80vw;
     }
-
+    .align-content-center img{
+        display:none;
+    }
     .glass-cadastro.container {
         width: 80vw;
+        margin-top: 2rem;
     }
 
     .btn-src {
@@ -1193,8 +1245,17 @@ input-neon {
         animation: none;
     }
 
-    .parallax-scrolling h2{
-        font-size: 10vw;
+    .parallax-scrolling h1{
+        font-size: 12vw;
+    }
+
+    .postagens{
+        width:90vw;
+        margin-left: -6rem;
+    }
+
+    .glass-aboutUs{
+        width: 110vw;
     }
 }
 
